@@ -1,0 +1,36 @@
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+
+  - job_name: 'onec_exporter_test'
+
+    metrics_path: /<IBName>/hs/metrics
+    basic_auth:
+      username: <username>
+      password: <password>
+    params:
+    #  bucket: ["2021-12-10T05:00:00Z"]
+      bucket: ['random'] #debug
+    scrape_interval: 1m
+    static_configs:
+      - targets:
+        # TEST
+        #- server1.organization.local
+        #- server2.organization.local
+        - <server address>
+
+  - job_name: 'onec_exporter_prod'
+
+    metrics_path: /<IBName>/hs/metrics
+
+    basic_auth:
+      username: <username>
+      password: <password>
+
+    scrape_interval: 1m
+    static_configs:
+      - targets:
+        # PROD
+        #- server1.organization.local
+        #- server2.organization.local
+        - <server address>
