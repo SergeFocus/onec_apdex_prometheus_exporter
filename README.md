@@ -1,5 +1,5 @@
-# onec_prometheus_exporter
-Simple 1C Prometheus Exporter
+# onec_apdex_prometheus_exporter
+Simple 1C APDEX Prometheus Exporter
 
 # Installation
 
